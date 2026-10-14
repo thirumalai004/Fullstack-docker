@@ -57,7 +57,7 @@ export default function App() {
   return (
     <main className="app">
       <header>
-        <h1>My Task Tracker</h1>
+        <h1>My Task Tracker v1 </h1>
         <span className={`status ${health}`}>API {health}</span>
       </header>
 
