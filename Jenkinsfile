@@ -87,7 +87,7 @@ pipeline {
         // Goes through nginx -> backend -> database, from inside the Docker network
         sh '''
           for i in $(seq 1 15); do
-            if docker compose exec -T frontend wget -qO- http://localhost/api/health | grep -q '"status":"ok"'; then
+            if docker compose exec -T frontend wget -qO- http://127.0.0.1/api/health | grep -q '"status":"ok"'; then
               echo "Health check passed"
               exit 0
             fi
